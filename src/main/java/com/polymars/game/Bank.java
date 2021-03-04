@@ -24,10 +24,10 @@ public class Bank {
 
     public Bank()
     {
-        winningColors = new ArrayList<Integer>();
+        winningColors = new ArrayList<>();
         for (int i = 0; i < bank.length; i++)
         {
-            bank[i] = new ArrayList<Integer>();
+            bank[i] = new ArrayList<>();
         }
     }
 
