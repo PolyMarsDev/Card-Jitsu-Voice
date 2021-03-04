@@ -58,18 +58,18 @@ public class Hand {
 
     public String toString()
     {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < hand.size(); i++)
         {
             if (i == hand.size() - 1)
             {
-                result += "and " + hand.get(i).getArticle() + " " + hand.get(i).toString();
+                result.append("and ").append(hand.get(i).getArticle()).append(" ").append(hand.get(i).toString());
             }
             else
             {
-                result += hand.get(i).getArticle() + " " + hand.get(i).toString() + ", ";
+                result.append(hand.get(i).getArticle()).append(" ").append(hand.get(i).toString()).append(", ");
             }
         }
-        return result;
+        return result.toString();
     }
 }
