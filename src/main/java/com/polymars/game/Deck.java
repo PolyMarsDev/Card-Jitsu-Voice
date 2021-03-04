@@ -15,12 +15,12 @@ public class Deck {
     public static final int BLUE = 4;
     public static final int PURPLE = 5;
 
-    private ArrayList<Card> deck;
+    private final ArrayList<Card> deck;
     Random rand = new Random();
 
     public Deck()
     {
-        deck = new ArrayList<Card>();
+        deck = new ArrayList<>();
     }
 
     public void createCards()
