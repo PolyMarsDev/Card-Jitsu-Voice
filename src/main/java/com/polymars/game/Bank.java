@@ -70,7 +70,7 @@ public class Bank {
             {
                 for (int k = 0; k < bank[2].size(); k++)
                 {
-                    if (bank[0].get(i) != bank[1].get(j) && bank[1].get(j) != bank[2].get(k) && bank[2].get(k) != bank[0].get(i))
+                    if (!bank[0].get(i).equals(bank[1].get(j)) && !bank[1].get(j).equals(bank[2].get(k)) && !bank[2].get(k).equals(bank[0].get(i)))
                     {
                         winningElement = MIXED;
                         winningColors.add(bank[0].get(i));
