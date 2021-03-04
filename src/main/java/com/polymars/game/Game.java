@@ -20,7 +20,7 @@ public class Game {
     public static final int TIE = 2;
 
     static final int MAX_HAND = 5;
-    static final ArrayList<String> elements = new ArrayList<String>(Arrays.asList("fire", "water", "snow"));
+    static final ArrayList<String> elements = new ArrayList<>(Arrays.asList("fire", "water", "snow"));
 
     static boolean newGame = true;
     static boolean startMatch = false;
