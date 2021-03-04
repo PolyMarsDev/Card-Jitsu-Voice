@@ -94,7 +94,7 @@ public class Game {
         {
             return "You currently have " + playerHand.toString() + " in your hand.";
         }
-        String args[] = input.split("\\s+");
+        String[] args = input.split("\\s+");
         if (args.length == 2 && elements.contains(args[0].toLowerCase()) && Integer.parseInt(args[1]) != NaN && Integer.parseInt(args[1]) > 1 && Integer.parseInt(args[1]) < 13)
         {
             currentPlayerCard = playerHand.useCard(elements.indexOf(args[0].toLowerCase()), Integer.parseInt(args[1]));
