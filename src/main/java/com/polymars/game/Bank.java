@@ -86,28 +86,28 @@ public class Bank {
 
     public String getWinningComboAsString()
     {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if (winningElement < 3)
         {
             for (int i = 0; i < winningColors.size(); i++)
             {
                 if (i == winningColors.size() - 1)
                 {
-                    result += "and " + colors[winningColors.get(i)] + " " + elements[winningElement];
+                    result.append("and ").append(colors[winningColors.get(i)]).append(" ").append(elements[winningElement]);
                 }
                 else
                 {
-                    result += colors[winningColors.get(i)] + " " + elements[winningElement] + ", ";
+                    result.append(colors[winningColors.get(i)]).append(" ").append(elements[winningElement]).append(", ");
                 }
             }
-            return result;
+            return result.toString();
         }
         return colors[winningColors.get(0)] + " Fire, " + colors[winningColors.get(1)] + " Water, and " + colors[winningColors.get(2)] + " Snow";
     }
 
     public String toString()
     {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int lastElement = bank.length - 1;
         while (lastElement >= 0 && bank[lastElement].isEmpty())
         {
@@ -126,19 +126,19 @@ public class Bank {
                 {
                     if (i == firstElement && j == 0)
                     {
-                        result += colors[bank[i].get(j)] + " " + elements[i];
+                        result.append(colors[bank[i].get(j)]).append(" ").append(elements[i]);
                     }
                     else
                     {
-                        result += "and " + colors[bank[i].get(j)] + " " + elements[i];
+                        result.append("and ").append(colors[bank[i].get(j)]).append(" ").append(elements[i]);
                     }
                 }
                 else
                 {
-                    result += colors[bank[i].get(j)] + " " + elements[i] + ", ";
+                    result.append(colors[bank[i].get(j)]).append(" ").append(elements[i]).append(", ");
                 }
             }
         }
-        return result;
+        return result.toString();
     }
 }
