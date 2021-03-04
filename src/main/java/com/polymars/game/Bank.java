@@ -3,17 +3,6 @@ package com.polymars.game;
 import java.util.ArrayList;
 
 public class Bank {
-    public static final int FIRE = 0;
-    public static final int WATER = 1;
-    public static final int SNOW = 2;
-    public static final int MIXED = 3;
-
-    public static final int RED = 0;
-    public static final int ORANGE = 1;
-    public static final int YELLOW = 2;
-    public static final int GREEN = 3;
-    public static final int BLUE = 4;
-    public static final int PURPLE = 5;
 
     final String[] elements = {"fire", "water", "snow"};
     final String[] colors = {"red", "orange", "yellow", "green", "blue", "purple"};
@@ -72,7 +61,7 @@ public class Bank {
                 {
                     if (!bank[0].get(i).equals(bank[1].get(j)) && !bank[1].get(j).equals(bank[2].get(k)) && !bank[2].get(k).equals(bank[0].get(i)))
                     {
-                        winningElement = MIXED;
+                        winningElement = Cards.MIXED;
                         winningColors.add(bank[0].get(i));
                         winningColors.add(bank[1].get(j));
                         winningColors.add(bank[2].get(k));

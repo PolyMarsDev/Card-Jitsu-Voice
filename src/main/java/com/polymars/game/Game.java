@@ -6,10 +6,6 @@ import java.util.Random;
 
 public class Game {
 
-    public static final int FIRE = 0;
-    public static final int WATER = 1;
-    public static final int SNOW = 2;
-
     public static final int WIN = 0;
     public static final int LOSE = 1;
     public static final int TIE = 2;
@@ -172,6 +168,6 @@ public class Game {
 
     static boolean isTypeAdvantage(int elementX, int elementY)
     {
-        return (elementX == FIRE && elementY == SNOW) || (elementX == WATER && elementY == FIRE) || (elementX == SNOW && elementY == WATER);
+        return (elementX == Cards.FIRE && elementY == Cards.SNOW) || (elementX == Cards.WATER && elementY == Cards.FIRE) || (elementX == Cards.SNOW && elementY == Cards.WATER);
     }
 }
