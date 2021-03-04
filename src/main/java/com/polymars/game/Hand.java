@@ -18,7 +18,7 @@ public class Hand {
 
     public Hand()
     {
-        hand = new ArrayList<Card>();
+        hand = new ArrayList<>();
     }
 
     public void addCard(Card card)
