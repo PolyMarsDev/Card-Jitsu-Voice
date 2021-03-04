@@ -28,11 +28,9 @@ public class Hand {
 
     public Card getCard(int element, int value)
     {
-        for (int i = 0; i < hand.size(); i++)
-        {
-            if (hand.get(i).getElement() == element && hand.get(i).getValue() == value)
-            {
-                return hand.get(i);
+        for (Card card : hand) {
+            if (card.getElement() == element && card.getValue() == value) {
+                return card;
             }
         }
         return null;
