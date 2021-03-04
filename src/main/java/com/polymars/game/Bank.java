@@ -18,7 +18,7 @@ public class Bank {
     final String[] elements = {"fire", "water", "snow"};
     final String[] colors = {"red", "orange", "yellow", "green", "blue", "purple"};
 
-    private ArrayList<Integer>[] bank = new ArrayList[3];
+    private final ArrayList<Integer>[] bank = new ArrayList[3];
     private int winningElement;
     private ArrayList<Integer> winningColors;
 
