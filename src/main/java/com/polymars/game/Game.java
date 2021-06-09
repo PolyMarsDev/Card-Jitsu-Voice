@@ -1,26 +1,19 @@
 package com.polymars.game;
 
-import com.polymars.game.Bank;
-import com.polymars.game.Deck;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-import static java.lang.Float.NaN;
 
 public class Game {
 
-    public static final int FIRE = 0;
-    public static final int WATER = 1;
-    public static final int SNOW = 2;
 
     public static final int WIN = 0;
     public static final int LOSE = 1;
     public static final int TIE = 2;
 
     static final int MAX_HAND = 5;
-    static final ArrayList<String> elements = new ArrayList<String>(Arrays.asList("fire", "water", "snow"));
+    static final ArrayList<String> elements = new ArrayList<>(Arrays.asList("fire", "water", "snow"));
 
     static boolean newGame = true;
     static boolean startMatch = false;
@@ -97,8 +90,8 @@ public class Game {
         {
             return "You currently have " + playerHand.toString() + " in your hand.";
         }
-        String args[] = input.split("\\s+");
-        if (args.length == 2 && elements.contains(args[0].toLowerCase()) && Integer.parseInt(args[1]) != NaN && Integer.parseInt(args[1]) > 1 && Integer.parseInt(args[1]) < 13)
+        String[] args = input.split("\\s+");
+        if (args.length == 2 && elements.contains(args[0].toLowerCase()) && !Float.isNaN(Integer.parseInt(args[1])) && Integer.parseInt(args[1]) > 1 && Integer.parseInt(args[1]) < 13)
         {
             currentPlayerCard = playerHand.useCard(elements.indexOf(args[0].toLowerCase()), Integer.parseInt(args[1]));
             if (currentPlayerCard == null)
@@ -177,6 +170,6 @@ public class Game {
 
     static boolean isTypeAdvantage(int elementX, int elementY)
     {
-        return (elementX == FIRE && elementY == SNOW) || (elementX == WATER && elementY == FIRE) || (elementX == SNOW && elementY == WATER);
+        return (elementX == Cards.FIRE && elementY == Cards.SNOW) || (elementX == Cards.WATER && elementY == Cards.FIRE) || (elementX == Cards.SNOW && elementY == Cards.WATER);
     }
 }
